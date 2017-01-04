@@ -13,6 +13,7 @@
 @property (nonatomic,strong)NSMutableArray *btns;
 @property (nonatomic,strong)UIButton *seleBtn;
 @property (nonatomic,assign)int index;
+@property (nonatomic,strong)UIImageView *imageView;
 @end
 
 @implementation ContentView
@@ -22,23 +23,21 @@
         self.index = 1;
         self.btns = [NSMutableArray array];
         
-        UIView *aView = [UIView new];
-        [self addSubview:aView];
-        [aView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 0));
-        }];
+        self.imageView = [[UIImageView alloc]initWithFrame:self.bounds];
+        self.imageView.userInteractionEnabled = YES;
+        [self addSubview:self.imageView];
+        
         int  count  = 5;
-        CGFloat margin = 8;
-        CGFloat width = (self.frame.size.width -  (count + 1) * margin) / count;
-    
+        CGFloat margin = 30;
+        CGFloat width = (self.frame.size.width -  (count - 1) * 3 - margin * 2) / count;
         NSArray *dataArray = [self ranfomArray];
         for (int i = 0 ; i < dataArray.count; i ++) {
             CGFloat low = i  % count;
             CGFloat row = i / count;
-            CGFloat X = margin + (margin + width) * row;
-            CGFloat Y = margin + (margin + width) * low;
+            CGFloat X = margin + (3 + width) * row;
+            CGFloat Y = margin + (3 + width) * low;
             UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(X,    Y, width, width )];
-            [aView addSubview:btn];
+            [self.imageView addSubview:btn];
             [btn setTitle:[NSString stringWithFormat:@"%@",dataArray[i]] forState:UIControlStateNormal];
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
           
@@ -50,7 +49,6 @@
             [self.btns addObject:btn];
         }
         
-        NSLog(@"%@",[self ranfomArray]);
     }
     return self;
 }
@@ -82,6 +80,9 @@
     }
 }
 
+- (void)setCententVackImg:(UIImage*)image{
+    self.imageView.image = image;
+}
 
 - (NSArray*)ranfomArray{
      NSMutableArray *startArray = [NSMutableArray array];

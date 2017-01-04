@@ -12,6 +12,8 @@
 @interface ContentView : UIView
 @property (nonatomic,weak)id<ContentViewDelegate> delegate;
 @property (nonatomic,strong)UIImage *bgImg;
+
+- (void)setCententVackImg:(UIImage*)image;
 @end
 
 @protocol ContentViewDelegate <NSObject>

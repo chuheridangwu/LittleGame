@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DidView : UIView
+@property (nonatomic,assign)int count;
 
+//减一个爱心图片
+- (void)didViewReductionLiveImg;
 @end

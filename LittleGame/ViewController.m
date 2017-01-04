@@ -40,7 +40,7 @@
 }
 
 -(void)clickContentViewErrorMessage{
-    
+    [self addCententView];
 }
 
 //成功

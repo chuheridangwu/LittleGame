@@ -45,17 +45,29 @@
 
         [bgImg addSubview:self.ctnView];
         [self.ctnView setBgImg:[UIImage imageNamed:[self colorArray][count]]];
+        [self.ctnView setCententVackImg:[UIImage imageNamed:[self cententBgColor][count]]];
         
         [bgImg addSubview:self.didView];
-        
         
     }
     return self;
 }
 
 - (void)clickErrorMessage{
-    if ([self.delegate respondsToSelector:@selector(clickContentViewErrorMessage)]) {
-        [self.delegate clickContentViewErrorMessage];
+    [self.didView didViewReductionLiveImg];
+    
+    [self determineWhetherReload];
+}
+
+//判断是否调用代理
+- (void)determineWhetherReload{
+    static int i = 0;
+    i++;
+    if (i == 4) {
+        i = 0;
+        if ([self.delegate respondsToSelector:@selector(clickContentViewErrorMessage)]) {
+            [self.delegate clickContentViewErrorMessage];
+        }
     }
 }
 
@@ -64,10 +76,6 @@
         [self.delegate clickContentSuccessfulCustomsClearance];
     }
 }
-
-
-
-
 
 #pragma mark  ---- lazy
 
@@ -82,6 +90,10 @@
     return @[@"pc_panel_blue",@"pc_panel_green",@"pc_panel_purple",@"pc_panel_red",@"pc_panel_yellow"];
 }
 
+- (NSArray*)cententBgColor{
+    return @[@"bg_panel_blue",@"bg_panel_green",@"bg_panel_purple",@"bg_panel_red",@"bg_panel_yellow"];
+}
+
 - (HeardView*)heardView{
     if (!_heardView) {
         _heardView = [HeardView new];
@@ -92,7 +104,7 @@
 
 - (ContentView*)ctnView{
     if (!_ctnView) {
-        _ctnView = [[ContentView alloc]initWithFrame:CGRectMake(50, XB_ScreenSize.height * 0.22, XB_ScreenSize.width - 100, XB_ScreenSize.width - 80)];
+        _ctnView = [[ContentView alloc]initWithFrame:CGRectMake(50, XB_ScreenSize.height * 0.22, XB_ScreenSize.width - 100, XB_ScreenSize.width - 100)];
         _ctnView.delegate = self;
     }
     return _ctnView;
