@@ -19,6 +19,9 @@
 @property (nonatomic,strong)HeardView *heardView;
 @property (nonatomic,strong)ContentView *ctnView;
 @property (nonatomic,strong)DidView *didView;
+
+@property (nonatomic,assign)int index;
+@property (nonatomic,weak)NSTimer *timer;
 @end
 
 @implementation BottonView
@@ -49,8 +52,23 @@
         
         [bgImg addSubview:self.didView];
         
+        
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(downTime:) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        self.index = 60;
+        [self.heardView setHeardViewTime:[NSString stringWithFormat:@"%d",self.index]];
     }
     return self;
+}
+
+- (void)downTime:(NSTimer*)timer{
+    self.index --;
+    if (self.index <= 0 ) {
+         [self userFailure];
+        return;
+    }
+    
+    [self.heardView setHeardViewTime:[NSString stringWithFormat:@"%d",self.index]];
 }
 
 - (void)clickErrorMessage{
@@ -65,16 +83,31 @@
     i++;
     if (i == 4) {
         i = 0;
-        if ([self.delegate respondsToSelector:@selector(clickContentViewErrorMessage)]) {
-            [self.delegate clickContentViewErrorMessage];
-        }
+        [self userFailure];
+    }
+}
+
+- (void)userFailure{
+    //清除倒计时
+    [self bottonDestructionCountdown];
+    
+    if ([self.delegate respondsToSelector:@selector(clickContentViewErrorMessage:)]) {
+        [self.delegate clickContentViewErrorMessage:[NSString stringWithFormat:@"%02d",60 - self.index == 0 ? 60 : 60 - self.index]];
     }
 }
 
 - (void)successfulCustomsClearance{
-    if ([self.delegate respondsToSelector:@selector(clickContentSuccessfulCustomsClearance)]) {
-        [self.delegate clickContentSuccessfulCustomsClearance];
+    //清除倒计时
+    [self bottonDestructionCountdown];
+    
+    if ([self.delegate respondsToSelector:@selector(clickContentSuccessfulCustomsClearance:)]) {
+        [self.delegate clickContentSuccessfulCustomsClearance:[NSString stringWithFormat:@"%02d",60 - self.index == 0 ? 60 : 60 - self.index]];
     }
+}
+
+- (void)bottonDestructionCountdown{
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 #pragma mark  ---- lazy
@@ -97,7 +130,6 @@
 - (HeardView*)heardView{
     if (!_heardView) {
         _heardView = [HeardView new];
-        [_heardView countdown];
     }
     return _heardView;
 }

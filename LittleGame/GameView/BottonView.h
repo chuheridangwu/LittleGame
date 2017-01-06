@@ -14,7 +14,7 @@
 @end
 
 @protocol BottonViewDelegate <NSObject>
-- (void)clickContentViewErrorMessage;
+- (void)clickContentViewErrorMessage:(NSString*)time;
 
-- (void)clickContentSuccessfulCustomsClearance;
+- (void)clickContentSuccessfulCustomsClearance:(NSString*)time;
 @end

@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 #import "BottonView.h"
+#import "ContinueView.h"
 #import "Header.h"
 
 @interface ViewController ()<BottonViewDelegate>
-@property (nonnull,strong)BottonView *cententView;
 @end
 
 @implementation ViewController
@@ -20,33 +20,44 @@
     [super viewDidLoad];
   
     [self addCententView];
-   
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(programOver) name:@"TheEndOfTheCurrentProgramRun" object:nil];
+ 
 }
 
 
 
-//当前程序结束
-- (void)programOver{
-    [self addCententView];
+-(void)clickContentViewErrorMessage:(NSString*)time{
+    [self clickNextViewImageName:@"pc_end_bad" time:time];
 }
+
+//成功
+- (void)clickContentSuccessfulCustomsClearance:(NSString*)time{
+    [self clickNextViewImageName:@"pc_end_good" time:time];
+}
+
+
+
+- (void)clickNextViewImageName:(NSString*)imageName time:(NSString*)time{
+    [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    ContinueView *contionView = [[ContinueView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:contionView];
+    __weak typeof(self) blockSelf  = self;
+    [contionView setContinueViewTime:time WithImgName:imageName NextBtn:^{
+        [blockSelf addCententView];
+    }];
+}
+
 
 
 - (void)addCententView{
     [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    self.cententView = [[BottonView alloc]initWithFrame:self.view.bounds];
-    self.cententView.delegate = self;
-    [self.view addSubview:self.cententView];
+     BottonView *cententView = [[BottonView alloc]initWithFrame:self.view.bounds];
+    cententView.delegate = self;
+    [self.view addSubview:cententView];
 }
 
--(void)clickContentViewErrorMessage{
-    [self addCententView];
-}
 
-//成功
-- (void)clickContentSuccessfulCustomsClearance{
-    
-}
+
+
 
 - (BOOL)prefersStatusBarHidden
 {

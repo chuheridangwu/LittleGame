@@ -12,7 +12,6 @@
 @interface HeardView ()
 @property (nonatomic,strong)NSArray *iconArry;
 @property (nonatomic,strong)UIButton *bgBtn;
-@property (nonatomic,assign)int index;
 @end
 
 @implementation HeardView
@@ -43,22 +42,8 @@
     return self;
 }
 
-- (void)countdown{
-     self.index = 60;
-    [self.bgBtn setTitle:[NSString stringWithFormat:@"%d",self.index] forState:UIControlStateNormal];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(downTime:) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-}
-
-- (void)downTime:(NSTimer*)timer{
-    self.index -- ;
-    if (self.index <= 0) {
-        [timer invalidate];
-        timer = nil;
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"TheEndOfTheCurrentProgramRun" object:nil];
-        return;
-    }
-    [self.bgBtn setTitle:[NSString stringWithFormat:@"%d",self.index] forState:UIControlStateNormal];
+- (void)setHeardViewTime:(NSString*)time{
+    [_bgBtn setTitle:time forState:UIControlStateNormal];
 }
 
 - (NSArray*)iconArry{
@@ -79,7 +64,7 @@
         [_bgBtn setBackgroundImage:[UIImage imageNamed:@"bg_timer.png"] forState:UIControlStateNormal];
         [_bgBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _bgBtn.userInteractionEnabled = NO;
-        
+        [_bgBtn setTitle:@"60" forState:UIControlStateNormal];
     }
     return _bgBtn;
 }

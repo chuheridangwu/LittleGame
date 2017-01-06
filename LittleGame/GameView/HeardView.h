@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HeardView : UIView
-- (void)countdown;
+- (void)setHeardViewTime:(NSString*)time;
 @end
