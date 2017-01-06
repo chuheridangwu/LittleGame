@@ -40,7 +40,7 @@
         [bgImg addSubview:self.heardView];
         [self.heardView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(30);
-            make.top.equalTo(80);
+            make.top.equalTo(60);
             make.right.equalTo(-30);
             make.height.equalTo(60);
         }];
@@ -136,7 +136,9 @@
 
 - (ContentView*)ctnView{
     if (!_ctnView) {
-        _ctnView = [[ContentView alloc]initWithFrame:CGRectMake(50, XB_ScreenSize.height * 0.22, XB_ScreenSize.width - 100, XB_ScreenSize.width - 100)];
+        CGFloat ctnX = (18 / XB_ScreenSize.width) * 375;
+        CGFloat ctnY = (110 / XB_ScreenSize.height) * 667;
+        _ctnView = [[ContentView alloc]initWithFrame:CGRectMake( ctnX, ctnY, XB_ScreenSize.width - ctnX * 2, XB_ScreenSize.width - ctnX * 2)];
         _ctnView.delegate = self;
     }
     return _ctnView;

@@ -28,7 +28,7 @@
         [self addSubview:self.imageView];
         
         int  count  = 5;
-        CGFloat margin = 30;
+        CGFloat margin = 20;
         CGFloat width = (self.frame.size.width -  (count - 1) * 3 - margin * 2) / count;
         NSArray *dataArray = [self ranfomArray];
         for (int i = 0 ; i < dataArray.count; i ++) {
