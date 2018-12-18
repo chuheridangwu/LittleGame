@@ -15,8 +15,6 @@
 		302A02F81DD0493800E2808B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 302A02F71DD0493800E2808B /* main.m */; };
 		302A02FB1DD0493800E2808B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 302A02FA1DD0493800E2808B /* AppDelegate.m */; };
 		302A02FE1DD0493800E2808B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302A02FD1DD0493800E2808B /* ViewController.m */; };
-		302A03011DD0493800E2808B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302A02FF1DD0493800E2808B /* Main.storyboard */; };
-		302A03061DD0493800E2808B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302A03041DD0493800E2808B /* LaunchScreen.storyboard */; };
 		302A03111DD0493800E2808B /* LittleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 302A03101DD0493800E2808B /* LittleGameTests.m */; };
 		302A031C1DD0493800E2808B /* LittleGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 302A031B1DD0493800E2808B /* LittleGameUITests.m */; };
 		302A03641DD04A8A00E2808B /* bg_end.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A032D1DD04A8A00E2808B /* bg_end.png */; };
@@ -39,9 +37,6 @@
 		302A03751DD04A8A00E2808B /* bg_story.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A033E1DD04A8A00E2808B /* bg_story.png */; };
 		302A03761DD04A8A00E2808B /* bg_timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A033F1DD04A8A00E2808B /* bg_timer.png */; };
 		302A03771DD04A8A00E2808B /* bg_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03401DD04A8A00E2808B /* bg_title.png */; };
-		302A037A1DD04A8A00E2808B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03431DD04A8A00E2808B /* Icon.png */; };
-		302A037B1DD04A8A00E2808B /* Icon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03441DD04A8A00E2808B /* Icon120@2x.png */; };
-		302A037C1DD04A8B00E2808B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03451DD04A8A00E2808B /* Icon@2x.png */; };
 		302A037D1DD04A8B00E2808B /* pc_crystal_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03461DD04A8A00E2808B /* pc_crystal_blue.png */; };
 		302A037E1DD04A8B00E2808B /* pc_crystal_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03471DD04A8A00E2808B /* pc_crystal_green.png */; };
 		302A037F1DD04A8B00E2808B /* pc_crystal_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03481DD04A8A00E2808B /* pc_crystal_none.png */; };
@@ -73,6 +68,11 @@
 		302A03991DD04A8B00E2808B /* pc_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03621DD04A8A00E2808B /* pc_sword.png */; };
 		302A039A1DD04A8B00E2808B /* sat_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 302A03631DD04A8A00E2808B /* sat_logo.png */; };
 		34F1B6C59860F268BAA47F50 /* Pods_LittleGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A2B082845C553EB7E2C282C /* Pods_LittleGame.framework */; };
+		875411C121C8CD630050AB36 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875411C021C8CD630050AB36 /* Media.xcassets */; };
+		875411CC21C8D01E0050AB36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 875411CE21C8D01E0050AB36 /* InfoPlist.strings */; };
+		875411D521C8D1E80050AB36 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 875411D721C8D1E80050AB36 /* Localizable.strings */; };
+		875411DD21C8DBED0050AB36 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875411DC21C8DBED0050AB36 /* main.storyboard */; };
+		8775555621C89A800026FA2C /* ConfigApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8775555521C89A800026FA2C /* ConfigApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,8 +110,6 @@
 		302A02FA1DD0493800E2808B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		302A02FC1DD0493800E2808B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		302A02FD1DD0493800E2808B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		302A03001DD0493800E2808B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		302A03051DD0493800E2808B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		302A03071DD0493800E2808B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		302A030C1DD0493800E2808B /* LittleGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		302A03101DD0493800E2808B /* LittleGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LittleGameTests.m; sourceTree = "<group>"; };
@@ -139,9 +137,6 @@
 		302A033E1DD04A8A00E2808B /* bg_story.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_story.png; sourceTree = "<group>"; };
 		302A033F1DD04A8A00E2808B /* bg_timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_timer.png; sourceTree = "<group>"; };
 		302A03401DD04A8A00E2808B /* bg_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_title.png; sourceTree = "<group>"; };
-		302A03431DD04A8A00E2808B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		302A03441DD04A8A00E2808B /* Icon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon120@2x.png"; sourceTree = "<group>"; };
-		302A03451DD04A8A00E2808B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		302A03461DD04A8A00E2808B /* pc_crystal_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pc_crystal_blue.png; sourceTree = "<group>"; };
 		302A03471DD04A8A00E2808B /* pc_crystal_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pc_crystal_green.png; sourceTree = "<group>"; };
 		302A03481DD04A8A00E2808B /* pc_crystal_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pc_crystal_none.png; sourceTree = "<group>"; };
@@ -174,6 +169,20 @@
 		302A03631DD04A8A00E2808B /* sat_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sat_logo.png; sourceTree = "<group>"; };
 		302A039E1DD058BC00E2808B /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		4A2B082845C553EB7E2C282C /* Pods_LittleGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		875411C021C8CD630050AB36 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		875411CD21C8D01E0050AB36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		875411CF21C8D1050050AB36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		875411D021C8D1070050AB36 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		875411D121C8D10B0050AB36 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		875411D221C8D10C0050AB36 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		875411D621C8D1E80050AB36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		875411D821C8D1EB0050AB36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		875411D921C8D1EC0050AB36 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		875411DA21C8D1EE0050AB36 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		875411DB21C8D1EF0050AB36 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		875411DC21C8DBED0050AB36 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		8775555421C89A800026FA2C /* ConfigApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigApp.h; sourceTree = "<group>"; };
+		8775555521C89A800026FA2C /* ConfigApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigApp.m; sourceTree = "<group>"; };
 		E39D24E61BC0255AAAF7D6EC /* Pods-LittleGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-LittleGame/Pods-LittleGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,13 +265,16 @@
 				302A02FA1DD0493800E2808B /* AppDelegate.m */,
 				302A02FC1DD0493800E2808B /* ViewController.h */,
 				302A02FD1DD0493800E2808B /* ViewController.m */,
+				8775555421C89A800026FA2C /* ConfigApp.h */,
+				8775555521C89A800026FA2C /* ConfigApp.m */,
 				301BF3901E1F3ACC004BA433 /* GameView */,
 				301BF38F1E1F3AB2004BA433 /* NextView */,
 				302A039E1DD058BC00E2808B /* Header.h */,
 				302A032C1DD04A8A00E2808B /* Resources */,
-				302A02FF1DD0493800E2808B /* Main.storyboard */,
-				302A03041DD0493800E2808B /* LaunchScreen.storyboard */,
 				302A03071DD0493800E2808B /* Info.plist */,
+				875411DC21C8DBED0050AB36 /* main.storyboard */,
+				875411CE21C8D01E0050AB36 /* InfoPlist.strings */,
+				875411D721C8D1E80050AB36 /* Localizable.strings */,
 				302A02F61DD0493800E2808B /* Supporting Files */,
 			);
 			path = LittleGame;
@@ -317,9 +329,6 @@
 				302A033E1DD04A8A00E2808B /* bg_story.png */,
 				302A033F1DD04A8A00E2808B /* bg_timer.png */,
 				302A03401DD04A8A00E2808B /* bg_title.png */,
-				302A03431DD04A8A00E2808B /* Icon.png */,
-				302A03441DD04A8A00E2808B /* Icon120@2x.png */,
-				302A03451DD04A8A00E2808B /* Icon@2x.png */,
 				302A03461DD04A8A00E2808B /* pc_crystal_blue.png */,
 				302A03471DD04A8A00E2808B /* pc_crystal_green.png */,
 				302A03481DD04A8A00E2808B /* pc_crystal_none.png */,
@@ -350,6 +359,7 @@
 				302A03611DD04A8A00E2808B /* pc_slash.png */,
 				302A03621DD04A8A00E2808B /* pc_sword.png */,
 				302A03631DD04A8A00E2808B /* sat_logo.png */,
+				875411C021C8CD630050AB36 /* Media.xcassets */,
 			);
 			name = Resources;
 			path = resources;
@@ -442,7 +452,7 @@
 				TargetAttributes = {
 					302A02F21DD0493700E2808B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = DBJ4NU35YX;
+						DevelopmentTeam = T2C8PFN9DD;
 						ProvisioningStyle = Automatic;
 					};
 					302A030B1DD0493800E2808B = {
@@ -466,6 +476,10 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				de,
+				ja,
+				ko,
 			);
 			mainGroup = 302A02EA1DD0493700E2808B;
 			productRefGroup = 302A02F41DD0493800E2808B /* Products */;
@@ -485,28 +499,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				302A03651DD04A8A00E2808B /* bg_fence.png in Resources */,
+				875411CC21C8D01E0050AB36 /* InfoPlist.strings in Resources */,
 				302A03831DD04A8B00E2808B /* pc_end_good.png in Resources */,
 				302A03771DD04A8A00E2808B /* bg_title.png in Resources */,
-				302A037A1DD04A8A00E2808B /* Icon.png in Resources */,
 				302A03971DD04A8B00E2808B /* pc_satbox.png in Resources */,
+				875411C121C8CD630050AB36 /* Media.xcassets in Resources */,
 				302A036C1DD04A8A00E2808B /* bg_level_yellow.png in Resources */,
+				875411DD21C8DBED0050AB36 /* main.storyboard in Resources */,
 				302A036E1DD04A8A00E2808B /* bg_main.png in Resources */,
 				302A03961DD04A8B00E2808B /* pc_panel_yellow.png in Resources */,
 				302A03931DD04A8B00E2808B /* pc_panel_purple.png in Resources */,
 				302A03761DD04A8A00E2808B /* bg_timer.png in Resources */,
-				302A037B1DD04A8A00E2808B /* Icon120@2x.png in Resources */,
 				302A03671DD04A8A00E2808B /* bg_game_start.png in Resources */,
 				302A03951DD04A8B00E2808B /* pc_panel_red.png in Resources */,
 				302A03861DD04A8B00E2808B /* pc_enemy_3.png in Resources */,
+				875411D521C8D1E80050AB36 /* Localizable.strings in Resources */,
 				302A03921DD04A8B00E2808B /* pc_panel_green.png in Resources */,
 				302A037E1DD04A8B00E2808B /* pc_crystal_green.png in Resources */,
 				302A038F1DD04A8B00E2808B /* pc_life.png in Resources */,
 				302A037D1DD04A8B00E2808B /* pc_crystal_blue.png in Resources */,
-				302A03061DD0493800E2808B /* LaunchScreen.storyboard in Resources */,
 				302A038C1DD04A8B00E2808B /* pc_enemy_9.png in Resources */,
 				302A038B1DD04A8B00E2808B /* pc_enemy_8.png in Resources */,
 				302A03891DD04A8B00E2808B /* pc_enemy_6.png in Resources */,
-				302A037C1DD04A8B00E2808B /* Icon@2x.png in Resources */,
 				302A03841DD04A8B00E2808B /* pc_enemy_1.png in Resources */,
 				302A03711DD04A8A00E2808B /* bg_panel_purple.png in Resources */,
 				302A036B1DD04A8A00E2808B /* bg_level_red.png in Resources */,
@@ -532,7 +546,6 @@
 				302A039A1DD04A8B00E2808B /* sat_logo.png in Resources */,
 				302A03661DD04A8A00E2808B /* bg_game_end.png in Resources */,
 				302A03991DD04A8B00E2808B /* pc_sword.png in Resources */,
-				302A03011DD0493800E2808B /* Main.storyboard in Resources */,
 				302A03701DD04A8A00E2808B /* bg_panel_green.png in Resources */,
 				302A036F1DD04A8A00E2808B /* bg_panel_blue.png in Resources */,
 				302A03911DD04A8B00E2808B /* pc_panel_blue.png in Resources */,
@@ -618,6 +631,7 @@
 				301BF39A1E1F3B0F004BA433 /* ContentView.m in Sources */,
 				301BF39C1E1F3B0F004BA433 /* HeardView.m in Sources */,
 				302A02FB1DD0493800E2808B /* AppDelegate.m in Sources */,
+				8775555621C89A800026FA2C /* ConfigApp.m in Sources */,
 				302A02F81DD0493800E2808B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,20 +668,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		302A02FF1DD0493800E2808B /* Main.storyboard */ = {
+		875411CE21C8D01E0050AB36 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				302A03001DD0493800E2808B /* Base */,
+				875411CD21C8D01E0050AB36 /* en */,
+				875411CF21C8D1050050AB36 /* zh-Hans */,
+				875411D021C8D1070050AB36 /* de */,
+				875411D121C8D10B0050AB36 /* ja */,
+				875411D221C8D10C0050AB36 /* ko */,
 			);
-			name = Main.storyboard;
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		302A03041DD0493800E2808B /* LaunchScreen.storyboard */ = {
+		875411D721C8D1E80050AB36 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				302A03051DD0493800E2808B /* Base */,
+				875411D621C8D1E80050AB36 /* en */,
+				875411D821C8D1EB0050AB36 /* zh-Hans */,
+				875411D921C8D1EC0050AB36 /* de */,
+				875411DA21C8D1EE0050AB36 /* ja */,
+				875411DB21C8D1EF0050AB36 /* ko */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -677,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -724,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -766,10 +790,12 @@
 			baseConfigurationReference = 2A62A489BC2A2E7DA6331DDF /* Pods-LittleGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DBJ4NU35YX;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = T2C8PFN9DD;
 				INFOPLIST_FILE = LittleGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ewer.LittleGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tg.huoxing1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -779,10 +805,12 @@
 			baseConfigurationReference = E39D24E61BC0255AAAF7D6EC /* Pods-LittleGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DBJ4NU35YX;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = T2C8PFN9DD;
 				INFOPLIST_FILE = LittleGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ewer.LittleGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tg.huoxing1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

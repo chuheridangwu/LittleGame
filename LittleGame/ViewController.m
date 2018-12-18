@@ -10,6 +10,8 @@
 #import "BottonView.h"
 #import "ContinueView.h"
 #import "Header.h"
+#import "ConfigApp.h"
+
 
 @interface ViewController ()<BottonViewDelegate>
 @end
@@ -18,9 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
     [self addCententView];
- 
+   
 }
 
 
@@ -50,7 +53,11 @@
 
 - (void)addCententView{
     [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-     BottonView *cententView = [[BottonView alloc]initWithFrame:self.view.bounds];
+    CGRect rect = self.view.bounds;
+    if ([ConfigApp isNotchScreen]) {
+        rect = CGRectMake(0, 22, self.view.bounds.size.width, self.view.bounds.size.height - 42);
+    }
+     BottonView *cententView = [[BottonView alloc]initWithFrame:rect];
     cententView.delegate = self;
     [self.view addSubview:cententView];
 }

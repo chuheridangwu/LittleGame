@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  LittleGame
+
+  Created by MLive on 2018/12/18.
+  Copyright © 2018 wewq. All rights reserved.
+*/
+CFBundleDisplayName = "Logische Übung";

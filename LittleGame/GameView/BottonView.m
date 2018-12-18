@@ -11,6 +11,8 @@
 #import "ContentView.h"
 #import "DidView.h"
 #import "Header.h"
+#import "ConfigApp.h"
+
 
 #define XB_ScreenSize  [UIScreen mainScreen].bounds.size
 
@@ -40,7 +42,7 @@
         [bgImg addSubview:self.heardView];
         [self.heardView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(30);
-            make.top.equalTo(60);
+            make.top.equalTo(([ConfigApp isNotchScreen] ? 92 : 70));
             make.right.equalTo(-30);
             make.height.equalTo(60);
         }];
@@ -50,9 +52,20 @@
         [self.ctnView setBgImg:[UIImage imageNamed:[self colorArray][count]]];
         [self.ctnView setCententVackImg:[UIImage imageNamed:[self cententBgColor][count]]];
         
+        [_ctnView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.heardView.mas_bottom).offset(10);
+            make.width.height.equalTo(self.ctnView.frame.size.width);
+            make.centerX.offset(0);
+        }];
+        
         [bgImg addSubview:self.didView];
         
-        
+        [_didView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.ctnView.mas_bottom).offset(10);
+            make.left.offset(10);
+            make.right.offset(-10);
+            make.centerX.offset(0);
+        }];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(downTime:) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
         self.index = 60;
@@ -136,8 +149,8 @@
 
 - (ContentView*)ctnView{
     if (!_ctnView) {
-        CGFloat ctnX = (18 / XB_ScreenSize.width) * 375;
-        CGFloat ctnY = (110 / XB_ScreenSize.height) * 667;
+        CGFloat ctnX = ( ([ConfigApp isNotchScreen] ? 30 : 18) / XB_ScreenSize.width) * 375;
+        CGFloat ctnY = (([ConfigApp isNotchScreen] ? 130 : 110) / XB_ScreenSize.height) * 667;
         _ctnView = [[ContentView alloc]initWithFrame:CGRectMake( ctnX, ctnY, XB_ScreenSize.width - ctnX * 2, XB_ScreenSize.width - ctnX * 2)];
         _ctnView.delegate = self;
     }

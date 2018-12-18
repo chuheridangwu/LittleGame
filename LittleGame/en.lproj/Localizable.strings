@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LittleGame
+
+  Created by MLive on 2018/12/18.
+  Copyright © 2018 wewq. All rights reserved.
+*/
+
+"LSNewStr1"="GAME OVER";
+"LSNewStr2"=" NEXT";
+"LSNewStr3"="Time:%d";

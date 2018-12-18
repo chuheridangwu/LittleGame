@@ -8,6 +8,7 @@
 
 #import "ContinueView.h"
 #import "Header.h"
+#import "ConfigApp.h"
 
 @interface ContinueView ()
 @property (nonatomic,strong)UILabel *timeL;
@@ -23,7 +24,7 @@
         [self addSubview:bgImg];
         bgImg.image = [UIImage imageNamed:@"bg_end"];
         [bgImg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 0));
+            make.edges.equalTo(self).insets(UIEdgeInsetsMake(([ConfigApp isNotchScreen] ? 22 : 0), 0, ([ConfigApp isNotchScreen] ? 39 : 0), 0));
         }];
         
         UILabel *titleL = [UILabel new];
